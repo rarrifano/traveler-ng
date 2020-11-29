@@ -24,13 +24,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-const notas = require('./routes/notas')
-app.use('/notas', notas)
+const nota = require('./routes/nota')
+app.use('/nota', nota)
 
-const usuarios = require('./routes/usuarios')
-app.use('/usuarios', usuarios)
+const usuario = require('./routes/usuario')
+app.use('/usuario', usuario)
 
-const empresas = require('./routes/empresas')
-app.use('/empresas', empresas)
+const empresa = require('./routes/empresa')
+app.use('/empresa', empresa)
+
+const transportadora = require('./routes/transportadora')
+app.use('/transportadora', transportadora)
+
+const faturamento = require('./routes/faturamento')
+app.use('/faturamento', faturamento)
 
 module.exports = app;
