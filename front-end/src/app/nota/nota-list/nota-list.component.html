@@ -1,0 +1,56 @@
+<h1>Listagem de Notas</h1>
+
+<mat-toolbar class="new-item">
+  <a mat-raised-button class="button-green" [routerLink]="['/nota/novo']">
+    <mat-icon>add_circle</mat-icon>
+    Nova Nota
+  </a>
+</mat-toolbar>
+<table mat-table [dataSource]="notas" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="numNota">
+      <th mat-header-cell *matHeaderCellDef>Nº Nota</th>
+      <td mat-cell *matCellDef="let nota"> {{nota.nro_nota}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="empresa">
+        <th mat-header-cell *matHeaderCellDef> Empresa </th>
+        <td mat-cell *matCellDef="let nota"> {{nota.empresa?.nome_empresa}} </td>
+      </ng-container>
+  
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let nota"> {{nota.status}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="usuario">
+        <th mat-header-cell *matHeaderCellDef> Usuário </th>
+        <td mat-cell *matCellDef="let nota"> {{nota.usuario?.nome_usuario}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="transportadora">
+        <th mat-header-cell *matHeaderCellDef> Transportadora </th>
+        <td mat-cell *matCellDef="let nota"> {{nota.transportadora?.nome_transportadora}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="editar">
+        <th mat-header-cell class="cell-align-center" *matHeaderCellDef>Editar</th> 
+        <td mat-cell class="cell-align-center" *matCellDef="let horario">
+            <a mat-raised-button title="Editar" 
+                [routerLink]="['/horario-aula',horario._id]">
+                <mat-icon>edit</mat-icon>
+            </a>
+        </td>
+    </ng-container>
+    
+      <ng-container matColumnDef="excluir">
+        <th mat-header-cell class="cell-align-center" *matHeaderCellDef>Excluir</th> 
+        <td mat-cell class="cell-align-center" *matCellDef="let horario">
+            <button mat-raised-button color="warn" title="Excluir" (click)="excluir(horario._id)">
+                <mat-icon>delete_forever</mat-icon>
+            </button>
+        </td>
+      </ng-container> 
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
