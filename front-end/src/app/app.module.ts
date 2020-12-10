@@ -19,6 +19,7 @@ import { MainFooterComponent } from './ui/main-footer/main-footer.component';
 import { MainMenuComponent } from './ui/main-menu/main-menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NotaListComponent } from './nota/nota-list/nota-list.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     MainToolbarComponent,
     MainFooterComponent,
     MainMenuComponent,
+    NotaListComponent,
   ],
   imports: [
     BrowserModule,

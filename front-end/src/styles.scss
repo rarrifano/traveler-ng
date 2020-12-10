@@ -3,3 +3,83 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+#content{
+    margin: 40px;
+}
+
+.mat-toolbar .mat-toolbar-single-row{
+    margin: auto;
+}
+
+.mat-table {
+    width: 100%;
+}
+
+.cell-align-right {
+    text-align: right !important;
+}
+
+.cell-align-center {
+    text-align: center !important;
+}
+
+// Coloca um leve destaque na linha sob o mouse
+.mat-row:hover {
+    filter: brightness(110%);
+}
+
+.new-item {
+    background-color: transparent;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    justify-content: flex-end;
+
+    a {
+        font-size: 110%;
+    }
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+  
+.example-full-width {
+    width: 100%;
+}
+
+.aline-input{
+  display: inline-block !important;
+  margin: 30px;
+}
+
+.aula-form{
+    margin-bottom: 20px;
+}
+
+.std-form {
+   
+    max-width: 80%;
+    margin: 0 auto;
+    
+    mat-form-field {
+       min-width: 150px;
+       max-width: 500px;
+       width: 100%;
+       margin-right: 30px;
+    }
+    
+}
+ 
+.form-buttons {
+    background: transparent;
+ 
+    mat-toolbar-row {
+       display: flex;
+       justify-content: space-between;
+       padding: 0px;
+    }
+}
