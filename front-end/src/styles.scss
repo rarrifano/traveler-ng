@@ -4,6 +4,7 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+
 #content{
     margin: 40px;
 }
@@ -46,7 +47,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 100%;
     margin: auto;
 }
-  
+
 .example-full-width {
     width: 100%;
 }
@@ -61,17 +62,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .std-form {
+
    
     max-width: 80%;
     margin: 0 auto;
     
+
+
+    max-width: 80%;
+    margin: 0 auto;
     mat-form-field {
        min-width: 150px;
        max-width: 500px;
        width: 100%;
        margin-right: 30px;
     }
-    
+
 }
  
 .form-buttons {
@@ -83,3 +89,33 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
        padding: 0px;
     }
 }
+
+.button-green{
+    background-color:#00c851 !important;
+    color: #FFFFFF;
+    align-items: center;
+    height: 2.4rem;
+}
+
+.button-red{
+    color: #FFFFFF;
+    align-items: center;
+    height: 2.4rem;
+}
+
+#content{
+    margin: 40px;
+}
+
+.mat-raised-button.mat-accent {
+    background-color: #5A38FC;
+}
+
+.white-icon {
+    color: white;
+}
+
+.mat-header-cell {
+    font-size: 16px;
+}
+
