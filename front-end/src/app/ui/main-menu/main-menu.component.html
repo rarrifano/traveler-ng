@@ -1,0 +1,10 @@
+<button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <a mat-menu-item [routerLink]="['/usuario']">Usuários</a>
+  <a mat-menu-item [routerLink]="['/empresa']">Empresas</a>
+  <a mat-menu-item [routerLink]="['/transportadora']">Transportadoras</a>
+  <a mat-menu-item [routerLink]="['/nota']">Notas</a>
+  <a mat-menu-item [routerLink]="['/financeiro']">Financeiro</a>
+</mat-menu>
