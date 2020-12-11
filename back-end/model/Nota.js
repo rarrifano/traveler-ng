@@ -26,7 +26,7 @@ const esquema = mongoose.Schema({
 
     status: {
         type: String,
-        enum: ['Pendente', 'Enviado']
+        required:true
     },
 
     data: {

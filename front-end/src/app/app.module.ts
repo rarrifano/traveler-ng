@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 import { NotaListComponent } from './nota/nota-list/nota-list.component';
 
 import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.component';
+import { NotaFormComponent } from './nota/nota-form/nota-form.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.compon
     MainMenuComponent,
     NotaListComponent,
     UsuarioListComponent,
+    NotaFormComponent,
   ],
   imports: [
     BrowserModule,

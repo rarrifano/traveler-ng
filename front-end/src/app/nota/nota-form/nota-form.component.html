@@ -1,0 +1,56 @@
+<form class="example-form" #f="ngForm" (ngSubmit)="salvar(f)" >
+    <legend>Dados Da Nota</legend>
+        
+        
+    <mat-form-field class="example-form aula-form">
+        <mat-label>Numero Nota</mat-label>
+      <input matInput [(ngModel)]="nota.nro_nota" name="nro_nota">
+    </mat-form-field>
+        
+    
+    <mat-form-field class="example-form aula-form">
+        <mat-label>Empresa</mat-label>
+            <mat-select [(ngModel)]="nota.empresa" name="empresa" required>
+                <mat-option *ngFor="let empresa of empresas" [value]="empresa._id">{{empresa?.nome_empresa}}</mat-option>
+            </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field class="example-form aula-form">
+        <mat-label>Usuário</mat-label>
+            <mat-select [(ngModel)]="nota.usuario" name="usuario" required>
+                <mat-option *ngFor="let usuario of usuarios" [value]="usuario._id">{{usuario?.nome_usuario}}</mat-option>
+            </mat-select>
+    </mat-form-field> 
+
+    <mat-form-field class="example-form aula-form">
+        <mat-label>Transportadora</mat-label>
+            <mat-select [(ngModel)]="nota.transportadora" name="transportadora" required>
+                <mat-option *ngFor="let transportadora of transportadoras" [value]="transportadora._id">{{transportadora?.nome_transportadora}}</mat-option>
+            </mat-select>
+    </mat-form-field>  
+
+    <mat-form-field class="example-form aula-form">
+        <mat-label>Status</mat-label>
+            <mat-select [(ngModel)]="nota.status" name="status" required>
+                <mat-option value="Pendente">Pendente</mat-option>
+                <mat-option value="Enviado">Enviado</mat-option>
+            </mat-select>
+    </mat-form-field> 
+
+    <mat-form-field class="example-form aula-form">
+        <mat-label>Data</mat-label>
+      <input matInput type='datetime-local' [(ngModel)]="nota.data" name="data">
+    </mat-form-field>
+
+    <mat-toolbar class="form-buttons">
+      <mat-toolbar-row>
+        <button mat-raised-button type="button" class="button-red" color="warn" (click)="voltar(f)">
+            Voltar
+          </button>
+        <button mat-raised-button type="submit" class="button-green">
+          Salvar
+        </button>
+        
+      </mat-toolbar-row>
+    </mat-toolbar>
+</form>
