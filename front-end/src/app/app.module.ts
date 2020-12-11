@@ -19,7 +19,12 @@ import { MainFooterComponent } from './ui/main-footer/main-footer.component';
 import { MainMenuComponent } from './ui/main-menu/main-menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+
+import { NotaListComponent } from './nota/nota-list/nota-list.component';
+
 import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.component';
+import { NotaFormComponent } from './nota/nota-form/nota-form.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +32,9 @@ import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.compon
     MainToolbarComponent,
     MainFooterComponent,
     MainMenuComponent,
+    NotaListComponent,
     UsuarioListComponent,
+    NotaFormComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,8 @@ const dbName = process.env.DB_NAME
 db(`mongodb+srv://ruth:${dbPass}@cluster0.h8q0y.mongodb.net/${dbName}?retryWrites=true&w=majority`);
 
 var app = express();
+const cors = require('cors')
+app.use(cors())
 
 app.use(logger('dev'));
 app.use(express.json());

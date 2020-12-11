@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
     <div id="content">
         <router-outlet></router-outlet>
     </div>
+    <br>
     <app-main-footer></app-main-footer>
   `,
   styles: []
