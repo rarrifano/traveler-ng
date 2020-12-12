@@ -4,14 +4,19 @@ import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.compon
 import { NotaListComponent } from './nota/nota-list/nota-list.component';
 import { NotaFormComponent } from './nota/nota-form/nota-form.component';
 import { UsuarioFormComponent } from './usuario/usuario-form/usuario-form.component';
+import { EmpresaListComponent } from './empresa/empresa-list/empresa-list.component';
+import { EmpresaFormComponent } from './empresa/empresa-form/empresa-form.component';
 
 const routes: Routes = [
-  { path:'nota', component: NotaListComponent },
-  { path:'nota/novo', component: NotaFormComponent  },
-  { path:'nota/:id', component: NotaFormComponent },
+  { path: 'nota', component: NotaListComponent },
+  { path: 'nota/novo', component: NotaFormComponent  },
+  { path: 'nota/:id', component: NotaFormComponent },
   { path: 'usuario', component: UsuarioListComponent },
-  { path:'usuario/novo', component: UsuarioFormComponent  },
-  { path:'usuario/:id', component: UsuarioFormComponent },
+  { path: 'usuario/novo', component: UsuarioFormComponent  },
+  { path: 'usuario/:id', component: UsuarioFormComponent },
+  { path: 'empresa', component: EmpresaListComponent },
+  { path: 'empresa/novo', component: EmpresaFormComponent  },
+  { path: 'empresa/:id', component: EmpresaFormComponent },
 ];
 
 @NgModule({
