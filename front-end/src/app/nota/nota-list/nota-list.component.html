@@ -1,8 +1,8 @@
 <h1>Listagem de Notas</h1>
 
 <mat-toolbar class="new-item">
-  <a mat-raised-button class="button-green" [routerLink]="['/nota/novo']">
-    <mat-icon>add_circle</mat-icon>
+  <a mat-raised-button color="accent" [routerLink]="['/nota/novo']">
+    <mat-icon class="white-icon">add_circle</mat-icon>
     Nova Nota
   </a>
 </mat-toolbar>
@@ -40,9 +40,9 @@
     <ng-container matColumnDef="editar">
         <th mat-header-cell class="cell-align-center" *matHeaderCellDef>Editar</th> 
         <td mat-cell class="cell-align-center" *matCellDef="let nota">
-            <a mat-raised-button title="Editar" 
+            <a mat-raised-button color="accent" title="Editar" 
                 [routerLink]="['/nota',nota._id]">
-                <mat-icon>edit</mat-icon>
+                <mat-icon class="white-icon">edit</mat-icon>
             </a>
         </td>
     </ng-container>
