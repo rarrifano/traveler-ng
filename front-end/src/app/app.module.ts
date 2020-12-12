@@ -25,6 +25,8 @@ import { NotaListComponent } from './nota/nota-list/nota-list.component';
 import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.component';
 import { NotaFormComponent } from './nota/nota-form/nota-form.component';
 import { UsuarioFormComponent } from './usuario/usuario-form/usuario-form.component';
+import { EmpresaListComponent } from './empresa/empresa-list/empresa-list.component';
+import { EmpresaFormComponent } from './empresa/empresa-form/empresa-form.component';
 
 
 @NgModule({
@@ -37,6 +39,8 @@ import { UsuarioFormComponent } from './usuario/usuario-form/usuario-form.compon
     UsuarioListComponent,
     NotaFormComponent,
     UsuarioFormComponent,
+    EmpresaListComponent,
+    EmpresaFormComponent,
   ],
   imports: [
     BrowserModule,

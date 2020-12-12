@@ -1,0 +1,26 @@
+<h1>{{ title }}</h1>
+
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
+
+	<mat-form-field>
+		<mat-label>Nome da empresa</mat-label>
+		<input matInput placeholder="Informe o nome da empresa" [(ngModel)]="empresa.nome_empresa" name="nome_empresa" required>
+  </mat-form-field>
+
+	<mat-form-field>
+		<mat-label>CNPJ da empresa</mat-label>
+		<input matInput placeholder="Informe o CNPJ da empresa" [(ngModel)]="empresa.cnpj_empresa" name="cnpj_empresa" required>
+  </mat-form-field>
+
+  <mat-toolbar class="form-buttons">
+    <mat-toolbar-row>
+      <button mat-raised-button type="submit" color="accent">
+        Salvar
+      </button>
+      <button mat-raised-button type="button" class="button-red" color="warn" (click)="voltar(f)">
+        Voltar
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+</form>
