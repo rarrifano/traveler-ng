@@ -35,7 +35,12 @@
                 <mat-option value="Pendente">Pendente</mat-option>
                 <mat-option value="Enviado">Enviado</mat-option>
             </mat-select>
-    </mat-form-field> 
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Valor da nota</mat-label>
+        <input matInput type="number" [(ngModel)]="nota.valor" name="valor" required>
+      </mat-form-field>
 
     <mat-form-field class="example-form aula-form">
         <mat-label>Data</mat-label>

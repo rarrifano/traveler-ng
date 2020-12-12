@@ -10,9 +10,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class NotaListComponent implements OnInit {
 
   notas: any = []
-  displayedColumns: string[] = ['numNota','empresa', 'status', 'usuario', 'transportadora' ,'data','editar', 'excluir']
+  displayedColumns: string[] = ['nro_nota','empresa', 'status', 'usuario', 'transportadora' ,'data', 'valor', 'editar', 'excluir']
+  
   constructor(private notaSrv: NotaService,
-    private snackBar : MatSnackBar) { }
+    private snackBar : MatSnackBar
+  ) { }
 
   async ngOnInit(){
     this.notas = await this.notaSrv.listar()

@@ -1,0 +1,55 @@
+<form class="example-form" #f="ngForm" (ngSubmit)="salvar(f)" >
+  <legend>Dados de Duplicata</legend>
+      
+      
+  <mat-form-field class="example-form aula-form">
+      <mat-label>Nº Duplicata</mat-label>
+    <input matInput [(ngModel)]="faturamento.nro_duplicata" name="nro_duplicata" required>
+  </mat-form-field>
+      
+  
+  <mat-form-field class="example-form aula-form">
+      <mat-label>Nº Nota</mat-label>
+          <mat-select [(ngModel)]="faturamento.nota" name="nro_nota">
+              <mat-option *ngFor="let nota of notas" [value]="nota._id">{{nota.nro_nota}}</mat-option>
+          </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="example-form aula-form">
+    <mat-label>Valor</mat-label>
+        <mat-select [(ngModel)]="faturamento.nota" name="valor">
+            <mat-option *ngFor="let nota of notas" [value]="nota._id">{{nota.valor}}</mat-option>
+        </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="example-form aula-form">
+     <mat-label>Data Vencimento</mat-label>
+    <input matInput type='datetime-local' [(ngModel)]="faturamento.data_vencimento" name="data_vencimento">
+  </mat-form-field>
+
+  <mat-form-field class="example-form aula-form">
+      <mat-label>Status</mat-label>
+          <mat-select [(ngModel)]="faturamento.status" name="status">
+              <mat-option value="Pendente">Pendente</mat-option>
+              <mat-option value="Recebido">Recebido</mat-option>
+          </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="example-form aula-form">
+    <mat-label>Usuário</mat-label>
+        <mat-select [(ngModel)]="faturamento.usuario" name="nome_usuario">
+            <mat-option *ngFor="let usuario of usuarios" [value]="usuario._id">{{usuario.nome_usuario}}</mat-option>
+        </mat-select>
+  </mat-form-field> 
+
+  <mat-toolbar class="form-buttons">
+    <mat-toolbar-row>
+      <button mat-raised-button type="submit" color="accent">
+        Salvar
+      </button>
+      <button mat-raised-button type="button" class="button-red" color="warn" (click)="voltar(f)">
+          Voltar
+        </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</form>
