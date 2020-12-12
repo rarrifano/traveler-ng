@@ -6,26 +6,18 @@ const esquema = mongoose.Schema({
         type: String,
         required: true
     },
-    valor_duplicata: {
-        type: Number,
-        required: true
-    },
-    
     nota: {
         type: mongoose.ObjectId,
-        ref: 'Nota',
-        required: true
+        ref: 'Nota'
     },
     usuario: {
         type: mongoose.ObjectId,
-        ref: 'Usuario',
-        required: true
+        ref: 'Usuario'
     },
-    tipo_duplicata: {
+    status: {
         type: String,
-        enum: ['Pagamento', 'Recebimento']
+        enum: ['Pendente', 'Recebido']
     },
-
     data_vencimento: {
         type: Date,
     }
