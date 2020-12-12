@@ -107,8 +107,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin: 40px;
 }
 
+.mat-raised-button {
+    color: white !important;
+}
+
 .mat-raised-button.mat-accent {
-    background-color: #5A38FC;
+    background-color: #5a38fc;
 }
 
 .white-icon {
