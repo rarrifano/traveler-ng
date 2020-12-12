@@ -4,11 +4,10 @@ import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.compon
 import { NotaListComponent } from './nota/nota-list/nota-list.component';
 
 const routes: Routes = [
-  {path:'nota', component: NotaListComponent}
-const routes: Routes = [
-  { path: 'usuario', component: UsuarioListComponent },
+    { path: 'usuario', component: UsuarioListComponent },
 //  { path: 'usuario/novo', component: UsuarioFormComponent },
-//  { path: 'usuario/:id', component: UsuarioFormComponent}
+//  { path: 'usuario/:id', component: UsuarioFormComponent},
+    { path:'nota', component: NotaListComponent }
 
 ];
 
