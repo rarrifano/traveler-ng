@@ -1,0 +1,36 @@
+<h1>{{ title }}</h1>
+
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
+
+	<mat-form-field>
+		<mat-label>Nome da transportadora</mat-label>
+		<input matInput placeholder="Informe o nome da transportadora" [(ngModel)]="transportadora.nome_transportadora" name="nome_transportadora" required>
+  </mat-form-field>
+
+	<mat-form-field>
+		<mat-label>CNPJ da transportadora</mat-label>
+		<input matInput placeholder="Informe o CNPJ da transportadora" [(ngModel)]="transportadora.cnpj_transportadora" name="cnpj_transportadora" required>
+  </mat-form-field>
+
+  <mat-form-field>
+		<mat-label>E-mail da transportadora</mat-label>
+		<input matInput placeholder="Informe o e-mail da transportadora" [(ngModel)]="transportadora.email" name="email" required>
+  </mat-form-field>
+
+  <mat-form-field>
+		<mat-label>Telefone da transportadora</mat-label>
+		<input matInput placeholder="Informe o telefone da transportadora" [(ngModel)]="transportadora.telefone" name="telefone" required>
+  </mat-form-field>
+
+  <mat-toolbar class="form-buttons">
+    <mat-toolbar-row>
+      <button mat-raised-button type="submit" color="accent">
+        Salvar
+      </button>
+      <button mat-raised-button type="button" class="button-red" color="warn" (click)="voltar(f)">
+        Voltar
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+</form>
