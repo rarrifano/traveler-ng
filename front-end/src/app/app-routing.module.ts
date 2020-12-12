@@ -6,6 +6,8 @@ import { NotaFormComponent } from './nota/nota-form/nota-form.component';
 import { UsuarioFormComponent } from './usuario/usuario-form/usuario-form.component';
 import { EmpresaListComponent } from './empresa/empresa-list/empresa-list.component';
 import { EmpresaFormComponent } from './empresa/empresa-form/empresa-form.component';
+import { TransportadoraListComponent } from './transportadora/transportadora-list/transportadora-list.component';
+import { TransportadoraFormComponent } from './transportadora/transportadora-form/transportadora-form.component';
 
 const routes: Routes = [
   { path: 'nota', component: NotaListComponent },
@@ -17,6 +19,9 @@ const routes: Routes = [
   { path: 'empresa', component: EmpresaListComponent },
   { path: 'empresa/novo', component: EmpresaFormComponent  },
   { path: 'empresa/:id', component: EmpresaFormComponent },
+  { path: 'transportadora', component: TransportadoraListComponent },
+  { path: 'transportadora/novo', component: TransportadoraFormComponent  },
+  { path: 'transportadora/:id', component: TransportadoraFormComponent },
 ];
 
 @NgModule({
